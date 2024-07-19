@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greeting App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <h1>Enter Names and Numbers</h1>
@@ -17,7 +18,7 @@
     <h2>Previous Searches</h2>
     <ul>
         {% for entry in previous_entries %}
-        <li>Hello, {{ entry.name }}! Your number is {{ entry.number }}.</li>
+        <li>Hello, {{ entry[0] }}! Your number is {{ entry[1] }}.</li>
         {% endfor %}
     </ul>
 </body>
